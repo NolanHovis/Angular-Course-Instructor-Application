@@ -50,3 +50,19 @@ Course Project Services & Dependency Injection
 - Dynamic / Lazy Load Components
 - Deploy to Firebase
 - PWA Offline Capabilites
+
+---
+
+#### Who Does What
+
+**German**
+Classes: 1,5,9,13,17
+
+**Lex**
+Classes: 2,6,10,14,18
+
+**Nolan**
+Classes: 3,7,11,15,19
+
+**Will**
+Classes: 4,8,12,16,20

@@ -1,9 +1,5 @@
 # Angular-Course-Book-App
 
-## API
-
-[Open Library](https://openlibrary.org/developers/api)
-
 ---
 
 ## Course Steps

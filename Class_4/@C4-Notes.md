@@ -23,7 +23,7 @@
 ```zsh
     ng new angulearn --no-strict
 
-    npm install --save bootstrap@3
+    npm install --save bootstrap@4
 ```
 
 1. Import "node_modules/bootstrap/dist/css/bootstrap.min.css" in angular.json under "styles" tag.
@@ -67,3 +67,8 @@
 - Inside the bookshelf component, add a row and 2 columns with the book-list & book-details components.
 - Inside the library component, add a row and 2 columns with the book-search & book-results components.
 - In the book-list components html file, add the 3 book components.
+- In the library component html file, add a row with a book-search column, an hr, the book-results column.
+
+### Adding Navigation to the App
+
+- a

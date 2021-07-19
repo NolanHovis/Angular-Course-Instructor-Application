@@ -10,6 +10,14 @@
 
 ![Site Features](./SiteFeatures.png)
 
+**What is the Design/UI flow?**
+
+![AuthDesign](./AuthDesign.png)
+
+![BookshelfDesign](./BookshelfDesign.png)
+
+![LibraryDesign](./LibraryDesign.png)
+
 ### Starting a New Project
 
 ```zsh
@@ -44,7 +52,18 @@
 
     ng g c bookshelf/book-details --skip-tests=true
 
+    ng g c bookshelf/shared/book --skip-test=true
+
     ng g c library/book-search --skip-tests=true
+
+    ng g c library/book-results --skip-tests=true
 ```
 
 - Make sure they are all uploaded in app.module.ts
+
+### Displaying Your Components
+
+- Add the bookshelf component and library component to your main app file inside of the column you previously created.
+- Inside the bookshelf component, add a row and 2 columns with the book-list & book-details components.
+- Inside the library component, add a row and 2 columns with the book-search & book-results components.
+- In the book-list components html file, add the 3 book components.

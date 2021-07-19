@@ -71,4 +71,13 @@
 
 ### Adding Navigation to the App
 
-- a
+- Create a nav element with navbar, navbar-dark and bg-dark classes.
+- Create collapse menu
+- Create basic links
+- Create dropdown toggler
+
+### Extra Time
+
+- Add Roboto Font TSK!!!
+- Add styles to navbar and container
+- Show in detail how you did the navbar

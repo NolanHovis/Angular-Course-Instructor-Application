@@ -52,7 +52,7 @@
 
     ng g c bookshelf/book-details --skip-tests=true
 
-    ng g c bookshelf/shared/book --skip-test=true
+    ng g c shared/book --skip-test=true
 
     ng g c library/book-search --skip-tests=true
 
@@ -66,8 +66,8 @@
 - Add the bookshelf component and library component to your main app file inside of the column you previously created.
 - Inside the bookshelf component, add a row and 2 columns with the book-list & book-details components.
 - Inside the library component, add a row and 2 columns with the book-search & book-results components.
-- In the book-list components html file, add the 3 book components.
-- In the library component html file, add a row with a book-search column, an hr, the book-results column.
+- In the book-list components html file, add 3 book components.
+- In the book-results component, add 3 book components.
 
 ### Adding Navigation to the App
 

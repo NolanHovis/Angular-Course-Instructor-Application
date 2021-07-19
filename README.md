@@ -1,8 +1,8 @@
 # Angular-Course-Book-App
 
-## Pre Steps
+## API
 
-- Create basic design
+[Open Library](https://openlibrary.org/developers/api)
 
 ---
 
@@ -44,6 +44,8 @@ Course Project Services & Dependency Injection
 - Select Individual Books for more info
 - Edit Book Information
 - Save Changes and Pull Changed from Local Storage / Firebase
+- Get data from API
+- Add Books from API to Your List
 - Get Data from Firebase (Http)
 - Login / Logout (Protected Routes)
 - Dynamic / Lazy Load Components
@@ -52,7 +54,7 @@ Course Project Services & Dependency Injection
 
 ---
 
-#### Who Does What
+#### Who Does What (Rough Outline)
 
 **German**
 Classes: 1,5,9,13,17

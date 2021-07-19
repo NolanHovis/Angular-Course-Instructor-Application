@@ -2,7 +2,6 @@
 
 ## Pre Steps
 
-- Talk about functionality / direction
 - Create basic design
 - Assign modules to individuals
 
@@ -36,3 +35,18 @@ Course Project - Directives
 **Class 7**
 Using Services & Dependency Injection
 Course Project Services & Dependency Injection
+
+---
+
+### Functionality
+
+- Add Books to Personal Library
+- Delete Books from Personal Library
+- Select Individual Books for more info
+- Edit Book Information
+- Save Changes and Pull Changed from Local Storage / Firebase
+- Get Data from Firebase (Http)
+- Login / Logout (Protected Routes)
+- Dynamic / Lazy Load Components
+- Deploy to Firebase
+- PWA Offline Capabilites

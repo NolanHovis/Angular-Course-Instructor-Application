@@ -3,7 +3,6 @@
 ## Pre Steps
 
 - Create basic design
-- Assign modules to individuals
 
 ---
 

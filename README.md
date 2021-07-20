@@ -67,5 +67,3 @@ Classes: 4,8,12,16,20
 ---
 
 #### Other Notes
-
-- If you have a lot of extra time during class after teaching your section. . . Focus on styling the application to our design.

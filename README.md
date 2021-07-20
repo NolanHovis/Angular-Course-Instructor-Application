@@ -1,70 +1,142 @@
-# Angular-Course-Book-App
+# Class 1 Introductions 
 
 ---
 
-## Course Steps
+## General Outline
 
-**Class 1**
-Introductions - Introduce the course, students to each other, etc….
-Setup VS Code
-Add Students github to their profiles
+### Welcome and Introduce the course
 
-**Class 2**
-Complete Getting Started
+- Course Info and introduction
+- What is Angular and why? (general information)
+- Code Coach Introduction and small “about me”
 
-**Class 3**
-The Basics
+### Students to each other
 
-**Class 4**
-Course Project - The Basics
-Debugging
+- Have everyone introduce themselves
 
-**Class 5**
-Components & Databinding Deep Dive
-Course Project - Components & Databinding
+### Slack Group 
 
-**Class 6**
-Directives Deep Dive
-Course Project - Directives
+- Slack will have updates of the course info and additional resources
 
-**Class 7**
-Using Services & Dependency Injection
-Course Project Services & Dependency Injection
+### Open to Questions
 
----
+### Set up and installations (solving technical issues students might have)
 
-### Functionality
+- Have everyone turn on laptop, give everyone wifi password
+- Setup VS Code
+- Add Students github to their profiles
+- Angular Setup
 
-- Add Books to Personal Library
-- Delete Books from Personal Library
-- Select Individual Books for more info
-- Edit Book Information
-- Save Changes and Pull Changed from Local Storage / Firebase
-- Get data from API
-- Add Books from API to Your List
-- Get Data from Firebase (Http)
-- Login / Logout (Protected Routes)
-- Dynamic / Lazy Load Components
-- Deploy to Firebase
-- PWA Offline Capabilites
+### How can you get the most out of this curriculum?
 
----
+### Brief Lecture 
+- Angular vs Angular 2 vs Latest Version
+- What is typescript?
+- What is bootstrap?
 
-#### Who Does What (Rough Outline)
+### Edit the First App (with bootstrap/typecript)(live coding)
 
-**German**
-Classes: 1,5,9,13,17
+### Extensive Lecture(optional)
+- What is Web Development?
+- What is a framework?
+- What's the difference between front end and back end?
+- Difference between client side and service side?
+- What is Full Stack?
 
-**Lex**
-Classes: 2,6,10,14,18
+### Let students have free time to get familiar with the Angular Setup/ask questions.
 
-**Nolan**
-Classes: 3,7,11,15,19
+### Before end of class, briefly go over what to expect in the next class.
 
-**Will**
-Classes: 4,8,12,16,20
 
----
+## Class 1 Extensive Notes (Optional Information)
+
+### Introduce the course
+- Course Info and introduction
+    - Codefi CodeLabs 4 ½ Month Front End Web Development program
+    - This course is design to teach you Angular and will guide you into creating fast and efficient websites and web applications.
+
+- What is Angular and why? (general information)
+    - Angular is a JavaScript Front end framework. The reason we learn a javascript framework is because it makes the development process much more easier and efficient. Today, over 7000 companies here in the U.S use Angular. The most notable ones are Google, Amazon, Udemy, Lyft, Snapchat and more. Angular is one of the most popular JavaScript front end frameworks that exist today.
+
+- Code Coach Introduction and small “about me”
+    - First name, Last name
+    - Suggested options to choose
+        - Where you are from?
+        - Hobbies
+        - Professional Background
+        - School
+        - Fun Facts
+
+### Students to each other
+- Have everyone introduce themselves.
+
+### Slack Group 
+- Slack will have updates of the course info and additional resources
+    - Weekly Material
+    - Provided Resources
+    - Ask Questions
+    - pcoming events or reminders 
+
+### Open to questions
+
+### Set up and installations (solving technical issues students might have)
+- Have everyone turn on laptop and give wifi password
+- Setup VS Code
+    - https://code.visualstudio.com/download
+- Add Students github to their profiles
+    - Create a github Account
+        - https://github.com/
+    - install git on your computer 
+        - https://git-scm.com/downloads
+    - For Github desktop
+        - https://desktop.github.com/
+- Angular Setup
+    - install node.js
+        - You can check to see if you have both npm and node installed with: 
+            - npm -v
+            - node -v
+        - https://nodejs.org/en/download/
+    - Install Angular CLI
+        - What is the angular CLI?
+            - The angular CLI is a tool used to generate angular components.
+        - sudo npm install -g @angular/cli@latest
+    - Create Angular Application 
+        - ng new my-first-app --no-strict
+
+### How can you get the most out of this curriculum?
+
+### Brief Lecture
+- Angular vs Angular 2 vs Latest Version
+    - Angular 1 is referred to as AngularJs
+    - Angular 2 is a complete Re-write from Angular 1. Angular 2 and up is referred to as just Angular. Every 6 months, there is a new version.
+
+- What is typescript?
+    - Angular is typescript based. It is a superset of Javascript and ensures and maintains the level of the application to prevent over growing bugs. Typescript is referred to as Statically typed programming and Javascript itself is called a dynamically typed languages.
+
+- What is bootstrap?
+    - Bootstrap is a CSS framework for providing responsive and mobile websites. It offers a quick and easy way to design your applications.
+
+### Edit the First App (with bootstrap/typecript)(live coding)
+
+### Extensive Lecture (Optional)
+- What is web development?
+    - Web Development is the process in which it takes to creating web applications and websites.
+
+- What is a web framework?
+    - A web framework is designed to support the development of web applications. For example, Angular.
+
+- What's the difference between front end and back end?
+    - The front end refers to the user interface. The back-end refers to the server and database to deliver information to the user.
+
+- Difference between client side and service side?
+    - Client side takes place on the user's device and server side means that it takes place on a web server.
+
+- What is full stack?
+    - A full stack web developer is a person who can both develop client and server software.
+
+### Let students have free time to get familiar with the Angular Setup/ask questions.
+
+### Before end of class, briefly go over what to expect in the next class.
 
 #### Other Notes
 

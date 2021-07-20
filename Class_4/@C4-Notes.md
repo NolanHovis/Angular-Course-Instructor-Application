@@ -97,7 +97,7 @@
 ### Debugging an Angular App
 
 - Make sure they understand the importance of using the chrome developer tools console, reading error messages, using console.log and walking through their code line by line to "follow the logic".
-- Show them how to debug using the browser sourcemaps / debugger tool.
+- Show them how to debug using the browser sourcemaps / debugger tool (Source => Webpack => . => Src).
 
 ---
 

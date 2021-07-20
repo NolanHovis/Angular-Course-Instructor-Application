@@ -139,5 +139,3 @@
 ### Before end of class, briefly go over what to expect in the next class.
 
 #### Other Notes
-
-- If you have a lot of extra time during class after teaching your section. . . Focus on styling the application to our design.

@@ -72,12 +72,23 @@
 ### Adding Navigation to the App
 
 - Create a nav element with navbar, navbar-dark and bg-dark classes.
-- Create collapse menu
-- Create basic links
-- Create dropdown toggler
+- Create collapse menu.
+- Create basic links.
+- Create dropdown toggler.
 
-### Extra Time
+### Adding the Book Model and Instantiations
 
-- Add Roboto Font TSK!!!
-- Add styles to navbar and container
-- Show in detail how you did the navbar
+- Create book.model.ts file as a class with a constructor.
+- Add myBooks array in Book-List Component with the type Book[].
+- Create a dummy book inside of the myBooks array using the "new" keyword.
+- In the Book-List Component HTML file, add an ngFor loop to display all books in the myBooks array and a Add New Book Button.
+- Test that this works by adding more books in the myBooks array.
+- Add the Dynamic Title, Genre, and Image variables.
+
+---
+
+#### Extra Time
+
+- Add Roboto Font.
+- Add styles to navbar and container.
+- Show in detail how you did the navbar.

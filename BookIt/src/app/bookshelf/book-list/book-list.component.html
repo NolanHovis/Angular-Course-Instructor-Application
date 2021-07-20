@@ -5,14 +5,14 @@
         <h4 class="list-group-item-heading">{{ book.title }}</h4>
         <p class="list-group-item-text mb-0">{{ book.genre }}</p>
       </div>
-      <span class="float-right">
+      <div class="float-right">
         <img
-          src="{{ book.bookCoverImagePath }}"
+          src="{{ book.coverImagePath }}"
           alt="{{ book.title }}"
           class="img-responsive rounded"
           style="max-height: 50px"
         />
-      </span>
+      </div>
     </a>
     <!-- <app-book></app-book> -->
   </div>

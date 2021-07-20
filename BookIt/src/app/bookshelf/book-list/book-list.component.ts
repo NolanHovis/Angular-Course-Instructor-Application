@@ -12,19 +12,19 @@ export class BookListComponent implements OnInit {
       'Book of Testing',
       'Will Wilder',
       'Mystery',
-      'https://source.unsplash.com/50x50/?book'
+      'https://source.unsplash.com/50x50/?mystery,book'
     ),
     new Book(
-      'Book of Testing',
-      'Will Wilder',
-      'Mystery',
+      'Testing Title 2',
+      'Bill',
+      'Science',
       'https://source.unsplash.com/50x50/?science,book'
     ),
     new Book(
-      'Book of Testing',
-      'Will Wilder',
-      'Mystery',
-      'https://source.unsplash.com/50x50/?mystery,book'
+      'Fantasy Test',
+      'Rando',
+      'Non-Fiction',
+      'https://source.unsplash.com/50x50/?fantasy,book'
     ),
   ];
 

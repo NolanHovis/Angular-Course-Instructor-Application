@@ -85,10 +85,25 @@
 - Test that this works by adding more books in the myBooks array.
 - Add the Dynamic Title, Genre, and Image variables.
 
+### Creating the Book Details
+
+- Add rows for the title, author, genre, image, tags, and edit book button.
+
+### Working on the Libary Page
+
+- Copy over the book-list html and paste in the library/book-results html. _Be sure to mention DRY Coding and why we shouldn't have two components doing basically the same thing... and that we will eventually put this logic in the book component!!_
+- Change into two rows if you have time... make sure to delete the "Add New Book Button".
+
+### Debugging an Angular App
+
+- Make sure they understand the importance of using the chrome developer tools console, reading error messages, using console.log and walking through their code line by line to "follow the logic".
+- Show them how to debug using the browser sourcemaps / debugger tool.
+
 ---
 
 #### Extra Time
 
 - Add Roboto Font.
+- Split the Library Results into two columns / arrays
+- Refactor the book.module.ts file to make it all happen in the constructor argument field.
 - Add styles to navbar and container.
-- Show in detail how you did the navbar.

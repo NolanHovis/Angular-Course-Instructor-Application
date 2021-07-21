@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Book } from './shared/book/book.model';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'BookIt';
+  loadedFeature = 'bookshelf'
+   selectedBook: Book;
+  onNavigate(feature: string){
+    this.loadedFeature = feature;
+  }
+
+
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Book } from '../shared/book/book.model';
 
 @Component({
   selector: 'app-library',
@@ -11,5 +12,6 @@ export class LibraryComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 
 }

@@ -7,19 +7,21 @@ import { BookshelfService } from '../bookshelf.service';
   templateUrl: './book-list.component.html',
   styleUrls: ['./book-list.component.css'],
 })
-export class BookListComponent implements OnInit {/*
-  @Output() bookWasSelected = new EventEmitter<Book>(); */
+export class BookListComponent implements OnInit {
   @Input() myBooks: Book[];
   @Input() book: Book;
 
-  constructor(
-    private bookshelfService: BookshelfService) {}
+  constructor(private bookshelfService: BookshelfService) {}
 
   ngOnInit(): void {
     this.myBooks = this.bookshelfService.getBooks()
   }
 
   onBookSelected(){
-   this.bookshelfService.bookSelected.emit(this.book)
+    this.bookshelfService.bookSelected.emit(this.book)
+  }
+
+  onRemoveBook(i) {
+    this.bookshelfService.removeBook(i);
   }
 }

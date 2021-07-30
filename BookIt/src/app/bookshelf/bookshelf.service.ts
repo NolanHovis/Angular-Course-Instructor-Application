@@ -29,7 +29,18 @@ export class BookshelfService {
   ];
 
   getBooks() {
-    return this.myBooks.slice();
+    return this.myBooks;
+  }
+
+  saveBook(book: Book) {
+    this.myBooks.push(book);
+  }
+
+  removeBook(i) {
+    const index: number = i
+    if (index !== -1) {
+      this.myBooks.splice(index, 1)
+    }
   }
 
 }

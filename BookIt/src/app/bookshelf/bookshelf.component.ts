@@ -19,6 +19,7 @@ export class BookshelfComponent implements OnInit {
           this.selectedBook = book
         }
       )
-
   }
+
+
 }

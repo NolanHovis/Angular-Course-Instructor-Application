@@ -6,7 +6,11 @@
 
 1. Add App Routing for base routes.
 2. Re-Add Navigation to our app.
-3. Add Child Routes for Bookshelf Component
+3. Add Child Routes for Bookshelf Component.
+4. Configuring Route Parameters.
+5. Passing Dynamic Params to/through Links.
+6. Adding Edit Book Routes.
+7. Programatic Edit Book Links
 
 ---
 
@@ -95,7 +99,7 @@ export class AppRoutingModule {}
 
 ### STEP 2: Adding Navigation back to our App
 
-#### Inside the app/shared/navigation HTML file
+#### Inside app/shared/navigation HTML file
 
 - REMOVE: click listeners and href attributes.
 
@@ -135,11 +139,11 @@ Settings
 </a>
 ```
 
-#### Inside the app/shared/navigation TS file
+#### Inside app/shared/navigation TS file
 
 - REMOVE: the eventEmitter Output and onSelect() function.
 
-#### Inside the app/shared/book HTML file
+#### Inside app/shared/book HTML file
 
 - REMOVE: the href attribute on the anchor tag.
 
@@ -149,21 +153,170 @@ Settings
 
 ### STEP 3: Adding Child Routes
 
-#### Inside the app/bookshelf folder
+#### Inside app/bookshelf folder
 
 - ADD: a bookshelf home page by running `ng g c bookshelf/bookshelf-home`.
 
 - ADD: an h3 tag inside the HTML saying "Please Select a Book!"
 
-#### Inside app-routing.module.ts
+#### Inside app-routing.module.ts file
 
 - ADD: a children property to the bookshelf path.
 
-- ADD: a route object for the bookshelf-home, book-details, and book-list.
+- ADD: a route object for the bookshelf-home, book-details, and book-edit components. (Do them one at a time).
 
-#### Inside app/bookshelf HTML component
+_RESULT_:
+
+```typescript
+const appRoutes: Routes = [
+  { path: '', redirectTo: '/bookshelf', pathMatch: 'full' },
+  {
+    path: 'bookshelf',
+    component: BookshelfComponent,
+    children: [
+      { path: '', component: BookshelfHomeComponent },
+      // { path: 'new', component: BookshelfEditorComponent },
+      // { path: ':id', component: BookDetailsComponent },
+      // { path: ':id/edit', component: BookshelfEditorComponent },
+    ],
+  },
+  { path: 'library', component: LibraryComponent },
+]
+```
+
+#### Inside app/bookshelf HTML file
 
 - ADD: `<router-outlet></router-outlet>` in place of the book-details and ng-template.
+
+#### Inside app/shared/book HTML & TS file
+
+- REMOVE: the onSelect() method and bookshelfService import.
+
+---
+
+### STEP 4: Configuring Route Parameters
+
+#### Inside app/bookshelf/book-details TS file
+
+- REMOVE: the @Input().
+
+- ADD: `private route: ActivatedRoute` inside the constructor (and import from "@anglular/router").
+
+- ADD: a subscription to the route.params observable inside NgOnInit() and set an id to the params['id].
+
+- SET: this.book equal to the new getBook() method you will create from the bookshelfService and pass in this.id.
+
+_RESULT_:
+
+```typescript
+book: Book;
+id: number;
+
+constructor(
+    private bookshelfService: BookshelfService,
+    private route: ActivatedRoute
+) {}
+
+ngOnInit(): void {
+    this.route.params.subscribe((params: Params) => {
+    this.id = +params['id'];
+    this.book = this.bookshelfService.getBook(this.id);
+    });
+}
+```
+
+#### Inside app/bookshelf/bookshelf.service.ts file
+
+- ADD: a getBook (by id) method.
+
+_RESULT_:
+
+```typescript
+getBook(id: number) {
+    return this.myBooks[id];
+}
+```
+
+---
+
+### STEP 5: Passing Dynamic Params to Links
+
+#### Inside app/bookshelf/book-list HTML file
+
+- ADD: a bound property index and pass to the `<app-recipe-item>` tag using the index from the \*ngFor loop.
+
+#### Inside app/shared/book HTML & TS files
+
+- ADD: an Input() for the idx we just passed in from the book-list.
+
+- ADD: Dynamic routing by adding to the anchor tag [routerLink]="[idx]".
+
+- ADD: routerLinkActive attribute to style the currently selected book.
+
+---
+
+### STEP 6: Adding Book Edit Functionality
+
+#### Inside bookshelf folder
+
+- ADD: a bookshelf-edit component by running `ng g c bookshelf/bookshelf-editor`.
+
+- REGISTER: the new routes in the app-routing.module.ts file.
+
+- ADD: the ActivatedRoute params observable inside the NgOnInit() and set this.id equal to +params['id'].
+
+- ADD: isEditMode variable to conditionally render based on what mode we are using / what route we are on.
+
+_RESULT_:
+
+```typescript
+export class BookshelfEditorComponent implements OnInit {
+  id: number
+  isEditMode = false
+
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    this.route.params.subscribe((params: Params) => {
+      this.id = +params['id']
+      this.isEditMode = params['id'] != null
+      console.log('%c  isEditMode: ', 'color: red;', this.isEditMode)
+    })
+  }
+}
+```
+
+---
+
+### STEP 7: Programatic Edit Book Links
+
+#### Inside app/bookshelf/book-list TS & HTML files
+
+- ADD: (click) event listener on the Add New Book Button.
+
+- ADD: "onNewBook()" function in the typescript file and inject the angular Router and ActivateRoute into the constructor.
+
+_RESULT_:
+
+```typescript
+onNewBook() {
+    this.router.navigate(['new'], { relativeTo: this.route });
+}
+```
+
+#### Inside app/bookshelf/book-details TS & HTML files
+
+- Add (click) listener to the Edit Book Button
+
+- ADD: Angular Router to constructor and create the onEditBook() function.
+
+_RESULT_:
+
+```typescript
+onEditBook() {
+    this.router.navigate(['../', this.id, 'edit'], { relativeTo: this.route });
+}
+```
 
 ---
 

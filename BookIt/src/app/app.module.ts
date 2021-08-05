@@ -12,6 +12,8 @@ import { BookComponent } from './shared/book/book.component';
 import { BookSearchComponent } from './library/book-search/book-search.component';
 import { BookResultsComponent } from './library/book-results/book-results.component';
 import { DropdownDirective } from './shared/dropdown/dropdown.directive';
+import { BookshelfHomeComponent } from './bookshelf/bookshelf-home/bookshelf-home.component';
+import { BookshelfEditorComponent } from './bookshelf/bookshelf-editor/bookshelf-editor.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { DropdownDirective } from './shared/dropdown/dropdown.directive';
     BookSearchComponent,
     BookResultsComponent,
     DropdownDirective,
+    BookshelfHomeComponent,
+    BookshelfEditorComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

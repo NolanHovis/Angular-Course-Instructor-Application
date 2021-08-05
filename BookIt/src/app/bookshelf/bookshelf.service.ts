@@ -1,8 +1,8 @@
 import { EventEmitter, Injectable } from '@angular/core';
-import { Book } from '../shared/book/book.model'
+import { Book } from '../shared/book/book.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class BookshelfService {
   bookSelected = new EventEmitter<Book>();
@@ -32,15 +32,18 @@ export class BookshelfService {
     return this.myBooks;
   }
 
+  getBook(id: number) {
+    return this.myBooks[id];
+  }
+
   saveBook(book: Book) {
     this.myBooks.push(book);
   }
 
   removeBook(i) {
-    const index: number = i
+    const index: number = i;
     if (index !== -1) {
-      this.myBooks.splice(index, 1)
+      this.myBooks.splice(index, 1);
     }
   }
-
 }

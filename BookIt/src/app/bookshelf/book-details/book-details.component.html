@@ -36,19 +36,20 @@
 
 <div class="row">
   <div class="col-md-12">
-    <div 
-    class="dropdown" 
-    appDropdown
-    #r="appDropdown"
-    >
-      <button 
-      type="button" 
-      class="btn btn-primary dropdown-toggle"
-      >Edit Book<span class='caret'></span></button>
-      <ul class="dropdown-menu" [ngClass]="{'show':r.isOpen}" >
-        <a class="dropwdown-item">Edit Book</a>
-        <a class="dropwdown-item">Delete Book</a>
+    <div class="dropdown" appDropdown #r="appDropdown">
+      <button type="button" class="btn btn-primary dropdown-toggle">
+        Edit Book<span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu px-2" [ngClass]="{ show: r.isOpen }">
+        <a
+          class="dropwdown-item mr-1"
+          style="cursor: pointer"
+          (click)="onEditBook()"
+          >Edit Book</a
+        >
+        |
+        <a class="dropwdown-item ml-1" style="cursor: pointer">Delete Book</a>
       </ul>
-    </div> 
+    </div>
   </div>
 </div>

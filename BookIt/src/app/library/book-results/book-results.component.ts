@@ -1,5 +1,8 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { I18nPluralPipe } from '@angular/common';
+import { Component, Input, OnInit } from '@angular/core';
+import { BookshelfService } from 'src/app/bookshelf/bookshelf.service';
 import { Book } from 'src/app/shared/book/book.model';
+import { LibraryService } from '../library.service';
 
 @Component({
   selector: 'app-book-results',
@@ -7,38 +10,27 @@ import { Book } from 'src/app/shared/book/book.model';
   styleUrls: ['./book-results.component.css'],
 })
 export class BookResultsComponent implements OnInit {
-  allBooks: Book[] = [
-    new Book(
-      'Testing API Books 2',
-      'Bill',
-      'Science',
-      'https://source.unsplash.com/50x50/?science,book'
-    ),
-    new Book(
-      'Library Test',
-      'Rando',
-      'Non-Fiction',
-      'https://source.unsplash.com/50x50/?fantasy,book'
-    ),
-    new Book(
-      'Book of API',
-      'Will Wilder',
-      'Mystery',
-      'https://source.unsplash.com/50x50/?mystery,book'
-    ),
-  ];
-  bookCol1: Book[] = [];
-  bookCol2: Book[] = [];
+  @Input() allBooks: Book[]
 
-  constructor() {}
+
+
+  constructor(private libraryService: LibraryService, private bookshelfService: BookshelfService) {
+  }
 
   ngOnInit(): void {
-    this.allBooks.forEach((book, idx) => {
+    this.libraryService.allBooks.forEach((book, idx) => {
       if (idx % 2 === 0) {
-        this.bookCol1.push(book);
+        this.libraryService.bookCol1.push(book);
       } else {
-        this.bookCol2.push(book);
+        this.libraryService.bookCol2.push(book);
       }
     });
+
+    this.allBooks = this.libraryService.getBooks()
+
+  }
+
+  onSaveBook(book: Book) {
+    return this.bookshelfService.saveBook(book)
   }
 }

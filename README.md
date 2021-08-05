@@ -4,32 +4,36 @@
 
 ## Course Steps
 
-**Class 1**
+**Class 1 (German)**
 Introductions - Introduce the course, students to each other, etc….
 Setup VS Code
 Add Students github to their profiles
 
-**Class 2**
+**Class 2 (Lex)**
 Complete Getting Started
 
-**Class 3**
+**Class 3 (Nolan)**
 The Basics
 
-**Class 4**
+**Class 4 (Will)**
 Course Project - The Basics
 Debugging
 
-**Class 5**
+**Class 5 (German)**
 Components & Databinding Deep Dive
 Course Project - Components & Databinding
 
-**Class 6**
+**Class 6 (Lex)**
 Directives Deep Dive
 Course Project - Directives
 
-**Class 7**
+**Class 7 (Nolan)**
 Using Services & Dependency Injection
 Course Project Services & Dependency Injection
+
+**Class 8 (Will)**
+Changing Pages with Routing
+Course Project - Routing
 
 ---
 
@@ -50,21 +54,4 @@ Course Project Services & Dependency Injection
 
 ---
 
-#### Who Does What (Rough Outline)
-
-**German**
-Classes: 1,5,9,13,17
-
-**Lex**
-Classes: 2,6,10,14,18
-
-**Nolan**
-Classes: 3,7,11,15,19
-
-**Will**
-Classes: 4,8,12,16,20
-
----
-
 #### Other Notes
-

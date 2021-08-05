@@ -56,7 +56,7 @@
     - This course is design to teach you Angular and will guide you into creating fast and efficient websites and web applications.
 
 - What is Angular and why? (general information)
-    - Angular is a JavaScript Front end framework. The reason we learn a javascript framework is because it makes the development process much more easier and efficient. Today, over 7000 companies here in the U.S use Angular. The most notable ones are Google, Amazon, Udemy, Lyft, Snapchat and more. Angular is one of the most popular JavaScript front end frameworks that exist today.
+    - Angular is a JavaScript Front end framework. The reason we learn a javascript framework is because it makes the development process much more easier and efficient. Today, over 7,000 companies here in the U.S use Angular. The most notable ones are Google, Amazon, Udemy, Lyft, Snapchat and more. Angular is one of the most popular JavaScript front end frameworks that exist today.
 
 - Code Coach Introduction and small “about me”
     - First name, Last name
@@ -75,11 +75,11 @@
     - Weekly Material
     - Provided Resources
     - Ask Questions
-    - pcoming events or reminders 
+    - upcoming events or reminders 
 
 ### Open to questions
 
-### Set up and installations (solving technical issues students might have)
+### Set up and installations - (solving technical issues students might have)
 - Have everyone turn on laptop and give wifi password
 - Setup VS Code
     - https://code.visualstudio.com/download
@@ -137,6 +137,10 @@
 ### Let students have free time to get familiar with the Angular Setup/ask questions.
 
 ### Before end of class, briefly go over what to expect in the next class.
+Plans for next class
+- Create a new angular app
+- editing the angular app
+- Course Structure
 
 #### Other Notes
 

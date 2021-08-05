@@ -63,12 +63,11 @@
     ng g c library/book-results --skip-tests=true
 ```
 
-
-
 - Add shared folder
 - Add `<app-navigation></app-navigation>` to App Component HTML.
 
 RESULT:
+
 ```html
 <div class="container">
   <app-navigation></app-navigation>
@@ -79,10 +78,12 @@ RESULT:
 
 ### Displaying Your Components
 
-__Inside App Component HTML__
-- Add ```<app-bookshelf></app-bookshelf>``` && ```<app-library></app-library>```
+**Inside App Component HTML**
 
-RESULT: 
+- Add `<app-bookshelf></app-bookshelf>` && `<app-library></app-library>`
+
+RESULT:
+
 ```html
 <div class="container">
   <app-navigation></app-navigation>
@@ -96,10 +97,12 @@ RESULT:
 </div>
 ```
 
-__Inside Bookshelf Component HTML__
-- Add ```<app-book-list></app-book-list>``` && ```<app-book-details></app-book-details>```
+**Inside Bookshelf Component HTML**
 
-RESULT: 
+- Add `<app-book-list></app-book-list>` && `<app-book-details></app-book-details>`
+
+RESULT:
+
 ```html
 <div class="row justify-content-between">
   <div class="col-md-6">
@@ -112,10 +115,12 @@ RESULT:
 </div>
 ```
 
-__Inside Library Component HTML__
-- Add ```<app-book-search></app-book-search>``` && ```<app-book-results></app-book-results>```
+**Inside Library Component HTML**
 
-RESULT: 
+- Add `<app-book-search></app-book-search>` && `<app-book-results></app-book-results>`
+
+RESULT:
+
 ```html
 <div class="row">
   <div class="col-md-6">
@@ -132,30 +137,34 @@ RESULT:
 </div>
 ```
 
-__Inside Bookshelf/Book-List Component HTML__
-- Add 3 ```<app-book></app-book>``` Components.
+**Inside Bookshelf/Book-List Component HTML**
 
-RESULT: 
+- Add 3 `<app-book></app-book>` Components.
+
+RESULT:
+
 ```html
 <div class="row mb-3">
   <div class="col-md-12">
-     <app-book></app-book>
-     <app-book></app-book>
-     <app-book></app-book>
+    <app-book></app-book>
+    <app-book></app-book>
+    <app-book></app-book>
   </div>
 </div>
 ```
 
-__Inside Library/Book-Results Component HTML__
-- Add 3 ```<app-book></app-book>``` Components.
+**Inside Library/Book-Results Component HTML**
 
-RESULT: 
+- Add 3 `<app-book></app-book>` Components.
+
+RESULT:
+
 ```html
 <div class="row mb-3">
   <div class="col-md-12">
-     <app-book></app-book>
-     <app-book></app-book>
-     <app-book></app-book>
+    <app-book></app-book>
+    <app-book></app-book>
+    <app-book></app-book>
   </div>
 </div>
 ```
@@ -164,12 +173,14 @@ RESULT:
 
 ### Adding Navigation to the App
 
-__Inside Shared/Navigation Component HTML__
+**Inside Shared/Navigation Component HTML**
+
 - Add Navbar, Collapse Menu, Links, and Dropdown Toggler.
-- *If you don't want to type all this... go to: https://getbootstrap.com/docs/4.0/components/navbar/#nav ... find the one with a dropdown ... add the required tweaks. (This is what we would do in the "real world" anyway!)
-- Make sure to add declarations in the typescript file for ```collapsed: boolean = true; show: boolean = false;```
+- \*If you don't want to type all this... go to: https://getbootstrap.com/docs/4.0/components/navbar/#nav ... find the one with a dropdown ... add the required tweaks. (This is what we would do in the "real world" anyway!)
+- Make sure to add declarations in the typescript file for `collapsed: boolean = true; show: boolean = false;`
 
 RESULT:
+
 ```html
 <nav class="navbar navbar-dark bg-dark navbar-expand-lg mb-4">
   <a class="navbar-brand brand" id="brand" href="#">BookIt</a>
@@ -232,10 +243,12 @@ RESULT:
 
 ### Adding the Book Model and Instantiations
 
-__Inside Shared/Book Folder__
+**Inside Shared/Book Folder**
+
 - Create book.model.ts file.
 
 RESULT:
+
 ```js
 export class Book {
   public title: string;
@@ -252,10 +265,12 @@ export class Book {
 }
 ```
 
-__Inside Bookshelf/Book-List Typescript File__
+**Inside Bookshelf/Book-List Typescript File**
+
 - Add myBooks array with dummy data
 
 RESULT:
+
 ```js
   myBooks: Book[] = [
     new Book(
@@ -267,13 +282,15 @@ RESULT:
   ];
 ```
 
-__Inside Bookshelf/Book-List HTML File__
+**Inside Bookshelf/Book-List HTML File**
+
 - Add ngFor loop to display all books.
 - Add "Add New Book" Button.
 - Test functionality by copy and pasting two more books into the array.
 - Add text interpolation for: Title, Genre, and Image
 
 RESULT:
+
 ```html
 <div class="row mb-3" *ngFor="let book of myBooks">
   <div class="col-md-12">
@@ -307,10 +324,12 @@ RESULT:
 
 ### Creating the Book Details
 
-__Inside Bookshelf/Book-Details HTML File__
+**Inside Bookshelf/Book-Details HTML File**
+
 - Add rows for the title, author, genre, image, tags, and edit book button. (use copy paste).
 
 RESULT:
+
 ```html
 <div class="row">
   <div class="col-md-12">
@@ -355,14 +374,16 @@ RESULT:
 
 ### Working on the Libary Page
 
-__Inside Library/Book-Results HTML File__
-- Copy book-list html and paste it here. 
-_Be sure to mention DRY Coding and why we shouldn't have two components doing basically the same thing... and that we will eventually put this logic in the book component!!_
+**Inside Library/Book-Results HTML File**
+
+- Copy book-list html and paste it here.
+  _Be sure to mention DRY Coding and why we shouldn't have two components doing basically the same thing... and that we will eventually put this logic in the book component!!_
 - Delete the "Add New Book" Button.
 - Change the ngFor loop to "let book of allBooks"
 - Add the allBooks array in the typescript file... the same as in the book-list component.
 
 RESULT:
+
 ```html
 <div class="row mb-3" *ngFor="let book of allBooks">
   <div class="col-md-12">
@@ -383,7 +404,9 @@ RESULT:
   </div>
 </div>
 ```
+
 ---
+
 ---
 
 ### Debugging an Angular App
@@ -391,26 +414,28 @@ RESULT:
 1. Show them Chrome Developer Tools Console... test out some console.log() statements in your code.
 2. Tell them to read the error messages carefully and google them if you don't understand.
 3. Let them know the different ways to fix code when they get stuck
-    - Read through line by line to "Follow the Logic"
-    - Google Error Messages
-    - Use Debugger Tool
-    - Ask Fellow Developer
-    - Post on StackOverflow
+   - Read through line by line to "Follow the Logic"
+   - Google Error Messages
+   - Use Debugger Tool
+   - Ask Fellow Developer
+   - Post on StackOverflow
 4. Show them how to debug using the browser sourcemaps debugger tool by navigating to the SOURCE panel, click on WEBPACK then . then SRC ...
 
 ---
+
 ---
 
 #### Extra Time
 
 1. Add Roboto Font.
-    - Go to google fonts and find roboto.
-    - Add the ones you want: Light, Regular, Medium, Bold
-    - Copy the Link
-    - Paste in the index.html file
-    - Add to root styles.css file
+   - Go to google fonts and find roboto.
+   - Add the ones you want: Light, Regular, Medium, Bold
+   - Copy the Link
+   - Paste in the index.html file
+   - Add to root styles.css file
 
 RESULT:
+
 ```css
 html,
 body,
@@ -418,7 +443,7 @@ input,
 label,
 button,
 a {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
 h1 {
@@ -442,6 +467,7 @@ span {
 2. Refactor the book.module.ts file to make it all happen in the constructor argument field.
 
 MODEL:
+
 ```js
 export class Book {
   constructor(public title: string, public author: string, public genre: string, public coverImagePath: string) {}
@@ -451,13 +477,14 @@ export class Book {
 ---
 
 3. Add Styles:
-    - In Angular.Json file, add the .scss extension to our root styles import.
-    - In styles.scss Add Our themes and import bootstrap.
-    - In App.css add media query and padding.
-    - In Navigation.css add link styling.
+   - In Angular.Json file, add the .scss extension to our root styles import.
+   - In styles.scss Add Our themes and import bootstrap.
+   - In App.css add media query and padding.
+   - In Navigation.css add link styling.
 
 STYLES.SCSS:
-```scss 
+
+```scss
     $primary:#4F4FB9;
     $black: #222;
     $white: #f1f1f1;
@@ -466,6 +493,7 @@ STYLES.SCSS:
 ```
 
 APP.CSS:
+
 ```css
 .container {
   padding: 0;
@@ -480,6 +508,7 @@ APP.CSS:
 ```
 
 NAVIGATION.CSS:
+
 ```css
 nav {
   padding: 1.75em;
@@ -504,6 +533,7 @@ nav a {
 4. Split the Library/Book-Results into two columns / arrays
 
 HTML:
+
 ```html
 <div class="mb-3 row">
   <div class="col-md-6" *ngFor="let book of bookCol1">
@@ -545,6 +575,7 @@ HTML:
 ```
 
 TYPESCRIPT:
+
 ```js
 export class BookResultsComponent implements OnInit {
   allBooks: Book[] = [
@@ -566,20 +597,20 @@ export class BookResultsComponent implements OnInit {
       'Mystery',
       'https://source.unsplash.com/50x50/?mystery,book'
     ),
-  ];
-  bookCol1: Book[] = [];
-  bookCol2: Book[] = [];
+  ]
+  bookCol1: Book[] = []
+  bookCol2: Book[] = []
 
   constructor() {}
 
   ngOnInit(): void {
     this.allBooks.forEach((book, idx) => {
       if (idx % 2 === 0) {
-        this.bookCol1.push(book);
+        this.bookCol1.push(book)
       } else {
-        this.bookCol2.push(book);
+        this.bookCol2.push(book)
       }
-    });
+    })
   }
 }
 ```

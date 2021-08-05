@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
@@ -7,12 +7,6 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class NavigationComponent implements OnInit {
   collapsed = true;
   show = false;
-  @Output() featureSelected = new EventEmitter;
-  constructor() {}
 
-  ngOnInit(): void {}
-
-  onSelect(feature: string){
-    this.featureSelected.emit(feature);
-  }
+  ngOnInit() {}
 }

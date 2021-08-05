@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Book } from 'src/app/shared/book/book.model';
+import { BookshelfService } from '../bookshelf.service';
 
 @Component({
   selector: 'app-book-details',
@@ -8,9 +9,13 @@ import { Book } from 'src/app/shared/book/book.model';
 })
 export class BookDetailsComponent implements OnInit {
   @Input() book: Book
-  constructor() { }
+  constructor(private bookshelfService: BookshelfService) { }
 
   ngOnInit(): void {
+  }
+
+  onSelected() {
+    this.bookshelfService.bookSelected.emit(this.book)
   }
 
 }

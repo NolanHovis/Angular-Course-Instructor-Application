@@ -35,6 +35,52 @@ Course Project Services & Dependency Injection
 Changing Pages with Routing
 Course Project - Routing
 
+**Class 9 (German)**
+Understanding Observables 
+Course Project - Observables
+
+**Class 10 (Lex)**
+Handling Forms in Angular Apps
+
+**Class 11 (Nolan)**
+Course Project - Forms
+Using Pipes to Transform Output
+
+**Class 12 (Will)**
+Making HTTP Requests
+
+**Class 13 (German)**
+Course Project - HTTP 
+Authentication and Route Protection in Angular
+
+**Class 14 (Lex)**
+Dynamic Components
+Angular Modules & Optimizing Angular Apps
+
+**Class 15 (Nolan)**
+Deploying an Angular App
+Codefi Labs Introduction to deploying Angular Apps with Heroku (in-class)
+
+**Class 16 && 17 (Will + German)**
+Working with NgRx in Our Project
+
+**Class 18 (Lex)**
+Angular Universal
+
+**Class 19 (Nolan)**
+Angular Animations
+Adding Offline Capabilities with Service Workers
+
+**Class 20 (Will)**
+A Basic Introduction to Unit Testing in Angular Apps
+
+**Class 21 (German)**
+Angular as a Platform & Closer Look at the CLI
+Course Roundup
+
+**Class 22 (Lex)**
+Codelabs Portfolio?
+
 ---
 
 ### Functionality

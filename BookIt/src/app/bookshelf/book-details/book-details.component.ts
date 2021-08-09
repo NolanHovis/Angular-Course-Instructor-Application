@@ -25,10 +25,6 @@ export class BookDetailsComponent implements OnInit {
     });
   }
 
-  onSelected() {
-    this.bookshelfService.bookSelected.emit(this.book);
-  }
-
   onEditBook() {
     this.router.navigate(['../', this.id, 'edit'], { relativeTo: this.route });
   }

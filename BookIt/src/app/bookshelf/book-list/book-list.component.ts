@@ -22,10 +22,6 @@ export class BookListComponent implements OnInit {
     this.myBooks = this.bookshelfService.getBooks();
   }
 
-  onBookSelected() {
-    this.bookshelfService.bookSelected.emit(this.book);
-  }
-
   onRemoveBook(i) {
     this.bookshelfService.removeBook(i);
   }

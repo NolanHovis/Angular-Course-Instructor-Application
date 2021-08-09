@@ -5,81 +5,81 @@
 ## Course Steps
 
 **Class 1 (German)**
-Introductions - Introduce the course, students to each other, etc….
-Setup VS Code
-Add Students github to their profiles
+- [x] Introductions - Introduce the course, students to each other, etc….
+- [x] Setup VS Code
+- [x] Add Students github to their profiles
 
 **Class 2 (Lex)**
-Complete Getting Started
+- [x] Complete Getting Started
 
 **Class 3 (Nolan)**
-The Basics
+- [x] The Basics
 
 **Class 4 (Will)**
-Course Project - The Basics
-Debugging
+- [x] Course Project - The Basics
+- [x] Debugging
 
 **Class 5 (German)**
-Components & Databinding Deep Dive
-Course Project - Components & Databinding
+- [x] Components & Databinding Deep Dive
+- [x] Course Project - Components & Databinding
 
 **Class 6 (Lex)**
-Directives Deep Dive
-Course Project - Directives
+- [x] Directives Deep Dive
+- [x] Course Project - Directives
 
 **Class 7 (Nolan)**
-Using Services & Dependency Injection
-Course Project Services & Dependency Injection
+- [x] Using Services & Dependency Injection
+- [x] Course Project Services & Dependency Injection
 
 **Class 8 (Will)**
-Changing Pages with Routing
-Course Project - Routing
+- [x] Changing Pages with Routing
+- [x] Course Project - Routing
 
 **Class 9 (German)**
-Understanding Observables 
-Course Project - Observables
+- [x] Understanding Observables 
+- [x] Course Project - Observables
 
 **Class 10 (Lex)**
-Handling Forms in Angular Apps
+- [ ] Handling Forms in Angular Apps
 
 **Class 11 (Nolan)**
-Course Project - Forms
-Using Pipes to Transform Output
+- [ ] Course Project - Forms
+- [ ] Using Pipes to Transform Output
 
 **Class 12 (Will)**
-Making HTTP Requests
+- [ ] Making HTTP Requests
 
 **Class 13 (German)**
-Course Project - HTTP 
-Authentication and Route Protection in Angular
+- [ ] Course Project - HTTP 
+- [ ] Authentication and Route Protection in Angular
 
 **Class 14 (Lex)**
-Dynamic Components
-Angular Modules & Optimizing Angular Apps
+- [ ] Dynamic Components
+- [ ] Angular Modules & Optimizing Angular Apps
 
 **Class 15 (Nolan)**
-Deploying an Angular App
-Codefi Labs Introduction to deploying Angular Apps with Heroku (in-class)
+- [ ] Deploying an Angular App
+- [ ] Codefi Labs Introduction to deploying Angular Apps with Heroku (in-class)
 
 **Class 16 && 17 (Will + German)**
-Working with NgRx in Our Project
+- [ ] Working with NgRx in Our Project
 
 **Class 18 (Lex)**
-Angular Universal
+- [ ] Angular Universal
 
 **Class 19 (Nolan)**
-Angular Animations
-Adding Offline Capabilities with Service Workers
+- [ ] Angular Animations
+- [ ] Adding Offline Capabilities with Service Workers
 
 **Class 20 (Will)**
-A Basic Introduction to Unit Testing in Angular Apps
+- [ ] A Basic Introduction to Unit Testing in Angular Apps
 
 **Class 21 (German)**
-Angular as a Platform & Closer Look at the CLI
-Course Roundup
+- [ ] Angular as a Platform & Closer Look at the CLI
+- [ ] Course Roundup
 
 **Class 22 (Lex)**
-Codelabs Portfolio?
+- [ ] Codelabs Portfolio?
 
 ---
 

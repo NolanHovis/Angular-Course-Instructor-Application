@@ -40,7 +40,7 @@
 - [x] Course Project - Observables
 
 **Class 10 (Lex)**
-- [ ] Handling Forms in Angular Apps
+- [x] Handling Forms in Angular Apps
 
 **Class 11 (Nolan)**
 - [ ] Course Project - Forms

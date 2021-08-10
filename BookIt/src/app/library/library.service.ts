@@ -11,19 +11,22 @@ export class LibraryService {
       'Testing API Books 2',
       'Bill',
       'Science',
-      'https://source.unsplash.com/50x50/?science,book'
+      'https://source.unsplash.com/50x50/?science,book',
+      800
     ),
     new Book(
       'Library Test',
       'Rando',
       'Non-Fiction',
-      'https://source.unsplash.com/50x50/?fantasy,book'
+      'https://source.unsplash.com/50x50/?fantasy,book',
+      76
     ),
     new Book(
       'Book of API',
       'Will Wilder',
       'Mystery',
-      'https://source.unsplash.com/50x50/?mystery,book'
+      'https://source.unsplash.com/50x50/?mystery,book',
+      43
     ),
   ];
   bookCol1: Book[] = [];

@@ -28,4 +28,9 @@ export class BookDetailsComponent implements OnInit {
   onEditBook() {
     this.router.navigate(['../', this.id, 'edit'], { relativeTo: this.route });
   }
+
+  onDeleteBook(){
+    this.bookshelfService.removeBook(this.id)
+    this.router.navigate(['../'], {relativeTo: this.route})
+  }
 }

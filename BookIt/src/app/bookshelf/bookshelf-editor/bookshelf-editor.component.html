@@ -1,1 +1,51 @@
-<p>bookshelf-editor works!</p>
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="title">Book Title</label>
+    <input
+      type="text"
+      id="title"
+      formControlName="title"
+      class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="author">Author</label>
+    <input
+      type="text"
+      id="author"
+      formControlName="author"
+      class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input
+      type="number"
+      id="price"
+      formControlName="price"
+      class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="genre">Genre</label>
+    <select class="form-control" id="genre" formControlName="genre">
+      <option disabled selected value>Select a Genre</option>
+      <option value="Mystery">Mystery</option>
+      <option value="Science">Science</option>
+      <option value="Non-Fiction">Non-Fiction</option>
+      <option value="Fiction">Fiction</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="coverImagePath">Image Path</label>
+    <input
+      type="text"
+      id="coverImagePath"
+      formControlName="coverImagePath"
+      class="form-control">
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <img [src]="bookForm.value['coverImagePath']" alt="" class="img-responsive">
+    </div>
+  </div>
+  <button type="submit" class="btn btn-success" [disabled]="!bookForm.valid">Save</button>
+  <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
+</form>

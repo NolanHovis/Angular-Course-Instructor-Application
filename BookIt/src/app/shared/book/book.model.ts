@@ -3,12 +3,14 @@ export class Book {
   public author: string;
   public genre: string;
   public coverImagePath: string;
+  public price: number
 
-  constructor(title: string, author: string, genre: string, img: string) {
+  constructor(title: string, author: string, genre: string, img: string, price: number) {
     this.title = title;
     this.author = author;
     this.genre = genre;
     this.coverImagePath = img;
+    this.price = price;
   }
 }
 

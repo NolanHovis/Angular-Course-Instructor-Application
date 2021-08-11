@@ -1,4 +1,4 @@
-import {  Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { Book } from '../shared/book/book.model';
 
@@ -7,16 +7,14 @@ import { Book } from '../shared/book/book.model';
 })
 export class BookshelfService {
   bookSelected = new Subject<Book>();
-  booksChanged = new Subject<Book[]>()
-
+  booksChanged = new Subject<Book[]>();
 
   private myBooks: Book[] = [
     new Book(
       'Book of Testing',
       'Will Wilder',
       'Mystery',
-      'https://source.unsplash.com/50x50/?mystery,book',
-      29.99
+      'https://source.unsplash.com/50x50/?mystery,book'
     ),
     new Book(
       'Testing Title 2',
@@ -51,7 +49,7 @@ export class BookshelfService {
     const index: number = i;
     if (index !== -1) {
       this.myBooks.splice(index, 1);
-      this.booksChanged.next(this.myBooks.slice())
+      this.booksChanged.next(this.myBooks.slice());
     }
   }
 
@@ -60,6 +58,6 @@ export class BookshelfService {
   }
 
   updateBook(index: number, updatedBook: Book) {
-    this.myBooks[index] = updatedBook
+    this.myBooks[index] = updatedBook;
   }
 }

@@ -16,6 +16,7 @@ import { BookshelfHomeComponent } from './bookshelf/bookshelf-home/bookshelf-hom
 import { BookshelfEditorComponent } from './bookshelf/bookshelf-editor/bookshelf-editor.component';
 import { AddedNotificationComponent } from './shared/added-notification/added-notification.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { SortPipe } from './sort.pipe';
 
 @NgModule({
@@ -33,13 +34,14 @@ import { SortPipe } from './sort.pipe';
     BookshelfHomeComponent,
     BookshelfEditorComponent,
     AddedNotificationComponent,
-    SortPipe
+    SortPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

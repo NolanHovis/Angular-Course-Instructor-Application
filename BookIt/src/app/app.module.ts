@@ -15,6 +15,8 @@ import { DropdownDirective } from './shared/dropdown/dropdown.directive';
 import { BookshelfHomeComponent } from './bookshelf/bookshelf-home/bookshelf-home.component';
 import { BookshelfEditorComponent } from './bookshelf/bookshelf-editor/bookshelf-editor.component';
 import { AddedNotificationComponent } from './shared/added-notification/added-notification.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SortPipe } from './sort.pipe';
 
 @NgModule({
   declarations: [
@@ -31,8 +33,14 @@ import { AddedNotificationComponent } from './shared/added-notification/added-no
     BookshelfHomeComponent,
     BookshelfEditorComponent,
     AddedNotificationComponent,
+    SortPipe
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

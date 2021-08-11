@@ -7,6 +7,7 @@ import { Book } from '../shared/book/book.model';
 })
 export class BookshelfService {
   bookSelected = new Subject<Book>();
+  booksChanged = new Subject<Book[]>()
 
 
   private myBooks: Book[] = [
@@ -14,19 +15,22 @@ export class BookshelfService {
       'Book of Testing',
       'Will Wilder',
       'Mystery',
-      'https://source.unsplash.com/50x50/?mystery,book'
+      'https://source.unsplash.com/50x50/?mystery,book',
+      29.99
     ),
     new Book(
       'Testing Title 2',
       'Bill',
       'Science',
-      'https://source.unsplash.com/50x50/?science,book'
+      'https://source.unsplash.com/50x50/?science,book',
+      15.99
     ),
     new Book(
       'Fantasy Test',
       'Rando',
       'Non-Fiction',
-      'https://source.unsplash.com/50x50/?fantasy,book'
+      'https://source.unsplash.com/50x50/?fantasy,book',
+      14.99
     ),
   ];
 
@@ -47,6 +51,15 @@ export class BookshelfService {
     const index: number = i;
     if (index !== -1) {
       this.myBooks.splice(index, 1);
+      this.booksChanged.next(this.myBooks.slice())
     }
+  }
+
+  addBook(book: Book) {
+    this.myBooks.push(book);
+  }
+
+  updateBook(index: number, updatedBook: Book) {
+    this.myBooks[index] = updatedBook
   }
 }

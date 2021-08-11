@@ -12,6 +12,9 @@ export class BookListComponent implements OnInit {
   @Input() myBooks: Book[];
   @Input() book: Book;
 
+  sortSwitcher = true
+  sortField = 'author'
+
   constructor(
     private bookshelfService: BookshelfService,
     private router: Router,
@@ -20,6 +23,16 @@ export class BookListComponent implements OnInit {
 
   ngOnInit(): void {
     this.myBooks = this.bookshelfService.getBooks();
+  }
+
+  onSort() {
+    this.sortSwitcher = !this.sortSwitcher;
+    if (this.sortSwitcher === true) {
+      this.sortField = 'author'
+    }
+    else {
+      this.sortField = 'title'
+    }
   }
 
   onRemoveBook(i) {

@@ -1,19 +1,12 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Book } from '../shared/book/book.model';
-import { LibraryService } from './library.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-library',
   templateUrl: './library.component.html',
-  styleUrls: ['./library.component.css']
+  styleUrls: ['./library.component.css'],
 })
 export class LibraryComponent implements OnInit {
-  bookToSave: Book
+  constructor() {}
 
-  constructor(private libraryService: LibraryService) { }
-
-  ngOnInit(): void {
-  }
-
-
+  ngOnInit(): void {}
 }

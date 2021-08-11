@@ -1,41 +1,51 @@
-import { Injectable } from "@angular/core";
-import { Book } from "../shared/book/book.model";
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Book } from '../shared/book/book.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LibraryService {
+  allBooks: Book[] = [];
 
-  allBooks: Book[] = [
-    new Book(
-      'Testing API Books 2',
-      'Bill',
-      'Science',
-      'https://source.unsplash.com/50x50/?science,book',
-      800
-    ),
-    new Book(
-      'Library Test',
-      'Rando',
-      'Non-Fiction',
-      'https://source.unsplash.com/50x50/?fantasy,book',
-      76
-    ),
-    new Book(
-      'Book of API',
-      'Will Wilder',
-      'Mystery',
-      'https://source.unsplash.com/50x50/?mystery,book',
-      43
-    ),
-  ];
-  bookCol1: Book[] = [];
-  bookCol2: Book[] = [];
+  constructor(private http: HttpClient) {}
 
-  constructor () {}
+  fetchBooks(query) {
+    // Turn Search Param into lowercase words with plus sign for spaces
+    const formattedSearchParam = query.split(' ').join('+').toLowerCase();
 
-  getBooks() {
-    return this.allBooks.slice()
+    // Send Http request to GET all data from the provided url
+    this.http
+      .get(`http://openlibrary.org/search.json?q=${formattedSearchParam}`)
+      .subscribe((response) => {
+        this.allBooks = [];
+        this.saveBooks(response);
+      });
   }
 
+  getBooks() {
+    return this.allBooks.slice();
+  }
+
+  saveBooks(books) {
+    // Map over all the book results
+    books.docs.map((book) => {
+      // Destructure the book results
+      const { title, author_name, first_publish_year, isbn } = book;
+
+      // For each book result, create a new book
+      const newBook = new Book(
+        title,
+        author_name ? author_name[0] : 0,
+        '',
+        '',
+        0,
+        first_publish_year,
+        isbn ? isbn[0] : ''
+      );
+
+      // Add it to allBooks array
+      this.allBooks = this.allBooks.concat(newBook);
+    });
+  }
 }

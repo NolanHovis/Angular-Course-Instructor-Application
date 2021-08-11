@@ -43,11 +43,12 @@
 - [x] Handling Forms in Angular Apps
 
 **Class 11 (Nolan)**
-- [ ] Course Project - Forms
-- [ ] Using Pipes to Transform Output
+- [x] Course Project - Forms
+- [x] Using Pipes to Transform Output
 
 **Class 12 (Will)**
-- [ ] Making HTTP Requests
+- [x] Making HTTP Requests
+- [x] (OpenLibrary External API)
 
 **Class 13 (German)**
 - [ ] Course Project - HTTP 

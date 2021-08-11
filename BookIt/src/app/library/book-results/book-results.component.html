@@ -1,9 +1,16 @@
-<div class="mb-3 row">
-  <div class="col-md-6" *ngFor="let bookEl of allBooks">
-    <app-book
-      [book]="bookEl"
-    ></app-book>
-    <button class="float-right" style="border: none; font-size: 16px;" (click)="onSaveBook(bookEl)">
-    &plus;</button>
+<div class="mb-3 row" *ngIf="libraryService.allBooks.length > 0">
+  <div class="col-md-6" *ngFor="let bookEl of libraryService.allBooks">
+    <app-book [book]="bookEl"></app-book>
+    <button
+      class="float-right"
+      style="border: none; font-size: 16px"
+      (click)="onSaveBook(bookEl)"
+    >
+      &plus;
+    </button>
   </div>
+</div>
+
+<div class="mb-3 row" *ngIf="libraryService.allBooks.length < 1">
+  <p>No Books Available</p>
 </div>

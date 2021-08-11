@@ -1,19 +1,11 @@
 export class Book {
-  public title: string;
-  public author: string;
-  public genre: string;
-  public coverImagePath: string;
-
-  constructor(title: string, author: string, genre: string, img: string) {
-    this.title = title;
-    this.author = author;
-    this.genre = genre;
-    this.coverImagePath = img;
-  }
+  constructor(
+    public title: string,
+    public author: string,
+    public genre?: string,
+    public coverImagePath?: string,
+    public price?: number,
+    public firstPublishYear?: number,
+    public isbn?: string
+  ) {}
 }
-
-// ! SHORTER SYNTAX !
-
-// export class Book {
-//   constructor(public title: string, public author: string, public genre: string, public coverImagePath: string) {}
-// }

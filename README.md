@@ -51,8 +51,8 @@
 - [x] (OpenLibrary External API)
 
 **Class 13 (German)**
-- [ ] Course Project - HTTP 
-- [ ] Authentication and Route Protection in Angular
+- [x] Course Project - HTTP 
+- [x] Authentication and Route Protection in Angular
 
 **Class 14 (Lex)**
 - [ ] Dynamic Components

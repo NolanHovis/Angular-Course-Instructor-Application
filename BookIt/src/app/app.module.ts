@@ -37,7 +37,7 @@ import { AuthInterceptService } from './auth/auth-interceptor.service';
     BookshelfEditorComponent,
     AddedNotificationComponent,
     SortPipe,
-    AuthComponent
+    AuthComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +46,9 @@ import { AuthInterceptService } from './auth/auth-interceptor.service';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptService, multi:true }],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptService, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

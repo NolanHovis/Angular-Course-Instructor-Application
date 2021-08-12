@@ -1,4 +1,4 @@
-# Class 8 - Changing Pages With Routing
+# Class 12 - Making HTTP Requests & External API
 
 ---
 

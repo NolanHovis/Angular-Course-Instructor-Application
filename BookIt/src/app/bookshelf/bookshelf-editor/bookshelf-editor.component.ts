@@ -70,5 +70,4 @@ export class BookshelfEditorComponent implements OnInit {
       'price': new FormControl(bookPrice, Validators.required)
     })
   }
-
 }

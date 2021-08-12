@@ -693,7 +693,7 @@ auth.service.ts
 ```typescript
   constructor(private http: HttpClient){}
   signup(email:string, password:string){
-    return this.http.post('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyB4tvNuj3dfgdfgzKP7KqTu__8CxrZP_FVkjCki;kl;RWs',
+    return this.http.post('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=API_KEY',
     {
       email:email,
       password: password,
@@ -718,7 +718,7 @@ interface AuthResponseData{
 .
 .
 .
-return this.http.post<AuthResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyB4tvNuj3zKP7KqTu__8CxrZP_FVkjCRWs',
+return this.http.post<AuthResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=API_KEY',
     {
       email:email,
       password: password,
@@ -1034,7 +1034,7 @@ this.user.next(user);
 
 ```typescript
   login(email: string, password: string) {
-    return this.http.post<AuthResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyB4tvNu34534534j3zKP7KqTu__8CxrZP_FVkjCRWs',
+    return this.http.post<AuthResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[API_KEY]',
       {
         email: email,
         password: password,
@@ -1699,4 +1699,37 @@ canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean 
         return true
 ```
 
-- end of section
+
+### STEP 17: Adding an environmental variable
+
+To keep our api secret, we can put our key in our environment.ts file
+
+- navigate to the auth service and copy or api key
+
+- navigate to the enviornment.ts file and store your apikey in a property inside environment
+
+```typescript
+export const environment = {
+  production: false,
+  firebaseAPIKey: "AI34rZP_FVkjCR345Ws"
+};
+
+```
+
+- copy the property and do the same thing for the environment.prod.ts file as it will be used for production
+
+- we can now go back to the auth service, import the values and add this query to the requests
+
+```typescript
+.
+.
+.
+ return this.http.post<AuthResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=' + environment.firebaseAPIKey,
+ .
+ .
+ .
+    return this.http.post<AuthResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key='+ environment.firebaseAPIKey,
+.
+.
+.
+```

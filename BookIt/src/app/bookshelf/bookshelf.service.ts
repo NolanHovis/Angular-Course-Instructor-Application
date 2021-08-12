@@ -9,29 +9,6 @@ export class BookshelfService {
   bookSelected = new Subject<Book>();
   booksChanged = new Subject<Book[]>();
 
-  // private myBooks: Book[] = [
-  //   new Book(
-  //     'Book of Testing',
-  //     'Will Wilder',
-  //     'Mystery',
-  //     'https://source.unsplash.com/50x50/?mystery,book'
-  //   ),
-  //   new Book(
-  //     'Testing Title 2',
-  //     'Bill',
-  //     'Science',
-  //     'https://source.unsplash.com/50x50/?science,book',
-  //     15.99
-  //   ),
-  //   new Book(
-  //     'Fantasy Test',
-  //     'Rando',
-  //     'Non-Fiction',
-  //     'https://source.unsplash.com/50x50/?fantasy,book',
-  //     14.99
-  //   ),
-  // ];
-
   private myBooks : Book[] = []
   getBooks() {
     return this.myBooks;

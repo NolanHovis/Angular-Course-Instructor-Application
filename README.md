@@ -63,7 +63,7 @@
 - [ ] Codefi Labs Introduction to deploying Angular Apps with Heroku (in-class)
 
 **Class 16 && 17 (Will + German)**
-- [ ] Working with NgRx in Our Project
+- [x] Working with NgRx in Our Project
 
 **Class 18 (Lex)**
 - [ ] Angular Universal
@@ -78,9 +78,6 @@
 **Class 21 (German)**
 - [ ] Angular as a Platform & Closer Look at the CLI
 - [ ] Course Roundup
-
-**Class 22 (Lex)**
-- [ ] Codelabs Portfolio?
 
 ---
 

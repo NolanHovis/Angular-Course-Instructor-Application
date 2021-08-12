@@ -16,8 +16,10 @@ import { BookshelfHomeComponent } from './bookshelf/bookshelf-home/bookshelf-hom
 import { BookshelfEditorComponent } from './bookshelf/bookshelf-editor/bookshelf-editor.component';
 import { AddedNotificationComponent } from './shared/added-notification/added-notification.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SortPipe } from './sort.pipe';
+import { AuthComponent } from './auth/auth.component';
+import { AuthInterceptService } from './auth/auth-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { SortPipe } from './sort.pipe';
     BookshelfEditorComponent,
     AddedNotificationComponent,
     SortPipe,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,7 @@ import { SortPipe } from './sort.pipe';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptService, multi:true }],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

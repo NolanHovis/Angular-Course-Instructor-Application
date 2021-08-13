@@ -32,8 +32,10 @@ export class BookshelfService {
   removeBook(i) {
     const index: number = i;
     if (index !== -1) {
+      const removedBook = this.getBook(index);
       this.myBooks.splice(index, 1);
       this.booksChanged.next(this.myBooks.slice());
+      this.bookSelected.next(removedBook);
     }
   }
 

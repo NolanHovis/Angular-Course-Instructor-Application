@@ -59,8 +59,8 @@
 - [x] Angular Modules & Optimizing Angular Apps
 
 **Class 15 (Nolan)**
-- [ ] Deploying an Angular App
-- [ ] Codefi Labs Introduction to deploying Angular Apps with Heroku (in-class)
+- [x] Deploying an Angular App
+- [x] Codefi Labs Introduction to deploying Angular Apps with Heroku (in-class)
 
 **Class 16 && 17 (Will + German)**
 - [x] Working with NgRx in Our Project

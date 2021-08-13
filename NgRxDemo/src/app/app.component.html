@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>NgRx Book Demo</h1>
+
+  <div class="row justify-content-between">
+    <div class="col-xs-12 col-md-6">
+      <app-library
+        class="book-list"
+        [books]="library$ | async"
+        (add)="onAdd($event)"
+      ></app-library>
+    </div>
+
+    <div class="col-xs-12 col-md-6">
+      <app-bookshelf
+        class="book-collection"
+        [books]="bookshelf$ | async"
+        (remove)="onRemove($event)"
+      >
+      </app-bookshelf>
+    </div>
+  </div>
+</div>

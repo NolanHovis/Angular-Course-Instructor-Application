@@ -1,0 +1,14 @@
+<h2>The Library</h2>
+<div class="book" *ngFor="let book of books">
+  <div>
+    <p>{{ book.volumeInfo.title }}</p>
+    <span> by {{ book.volumeInfo.authors }}</span>
+  </div>
+  <button
+    (click)="add.emit(book.id)"
+    data-test="add-button"
+    class="btn btn-primary"
+  >
+    +
+  </button>
+</div>

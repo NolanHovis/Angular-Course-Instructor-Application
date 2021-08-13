@@ -53,29 +53,3 @@ export class BookshelfComponent implements OnInit {
     }, 2500)
   }  
 }
-
-
-
-/* export class BookshelfComponent implements OnInit {
-  alert: string;
-
-  private bookChangeSub: Subscription;
-  constructor(private bsService: BookshelfService) { }
-
-
-  ngOnInit(): void {
-    this.bookChangeSub = this.bsService.bookSelected.subscribe(book=>{
-      console.log(book);
-      this.alert = `${book.title} by ${book.author} was removed from your library!`;
-      setTimeout(() => this.onHandleClose(), 3000)
-    });
-  }
-  
-  ngOnDestroy(){
-    this.bookChangeSub.unsubscribe();
-  }
-  onHandleClose(){
-    this.alert = null;
-  }
-}
- */

@@ -11,4 +11,4 @@
     <app-book-results></app-book-results>
   </div>
 </div>
-<app-added-notification></app-added-notification>
+<app-alert [message]='alert' *ngIf="alert" (close)='onHandleClose()'></app-alert>

@@ -1,33 +1,26 @@
-import { BookshelfEditorComponent } from './bookshelf/bookshelf-editor/bookshelf-editor.component';
-import { BookDetailsComponent } from './bookshelf/book-details/book-details.component';
-import { BookshelfHomeComponent } from './bookshelf/bookshelf-home/bookshelf-home.component';
-import { LibraryComponent } from './library/library.component';
-import { BookshelfComponent } from './bookshelf/bookshelf.component';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { BooksResolverService } from './bookshelf/books-resolver.service';
-import { AuthComponent } from './auth/auth.component';
-import { AuthGuard } from './auth/auth.guard';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { LibraryModule } from './library/library.module';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/bookshelf', pathMatch: 'full' },
-  {
-    path: 'bookshelf',
-    component: BookshelfComponent,
-    canActivate: [AuthGuard],
-    children: [
-      { path: '', component: BookshelfHomeComponent },
-      { path: 'new', component: BookshelfEditorComponent },
-      { path: ':id', component: BookDetailsComponent, resolve: [BooksResolverService] },
-      { path: ':id/edit', component: BookshelfEditorComponent, resolve: [BooksResolverService] },
-    ],
+  { 
+    path: 'auth', 
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
   },
-  { path: 'library', component: LibraryComponent },
-  {path: 'auth', component: AuthComponent}
+  { 
+    path: 'bookshelf', 
+    loadChildren: () => import('./bookshelf/bookshelf.module').then(m => m.BookshelfModule)
+  },
+  { 
+    path: 'library', 
+    loadChildren: () => import('./library/library.module').then(m=>m.LibraryModule )
+  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes)],
-  exports: [RouterModule],
+  imports: [RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules})],
+  exports: [RouterModule]
 })
+
 export class AppRoutingModule {}

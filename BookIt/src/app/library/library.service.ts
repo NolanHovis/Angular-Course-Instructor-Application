@@ -16,7 +16,7 @@ export class LibraryService {
 
     // Send Http request to GET all data from the provided url
     this.http
-      .get(`http://openlibrary.org/search.json?q=${formattedSearchParam}`)
+      .get(`https://openlibrary.org/search.json?q=${formattedSearchParam}`)
       .subscribe((response) => {
         this.allBooks = [];
         this.saveBooks(response);

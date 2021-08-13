@@ -2,13 +2,12 @@
   "name": "book-it",
   "version": "0.1.0",
   "scripts": {
-    "ng": "ng",
-    "client": "cd BookIt && ng server.js",
-    "start": "ng server.js",
-    "build": "cd BookIt && ng build --prod",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "heroku-postbuild": "cd BookIt && ng build --prod"
+    "client": "cd BookIt && ng serve",
+    "server": "node server.js",
+    "build": "cd BookIt && npm run build",
+    "dev": "concurrently --kill-others-on-fail \"ng serve\"",
+    "start": "node server.js",
+    "heroku-postbuild": "cd BookIt && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "private": true,
   "dependencies": {

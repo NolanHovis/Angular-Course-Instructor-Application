@@ -55,8 +55,8 @@
 - [x] Authentication and Route Protection in Angular
 
 **Class 14 (Lex)**
-- [ ] Dynamic Components
-- [ ] Angular Modules & Optimizing Angular Apps
+- [x] Dynamic Components
+- [x] Angular Modules & Optimizing Angular Apps
 
 **Class 15 (Nolan)**
 - [ ] Deploying an Angular App

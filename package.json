@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "scripts": {
     "ng": "ng",
+    "client": "cd BookIt && yarn start",
     "start": "ng server.js",
-    "build": "ng build",
+    "build": "cd BookIt && ng build --prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "heroku-postbuild": "ng build --prod"
+    "heroku-postbuild": "cd BookIt && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "private": true,
   "dependencies": {

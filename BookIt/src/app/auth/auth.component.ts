@@ -38,6 +38,9 @@ export class AuthComponent{
     }, error =>{
       console.log(error)
       this.error = "An error occured!"
+      setTimeout(() => {
+        this.error = null;
+      }, 3000)
     })
 
     form.reset();

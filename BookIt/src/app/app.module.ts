@@ -13,7 +13,7 @@ import { SharedModule } from './shared/shared.module';
     NavigationComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
     AppRoutingModule,
     SharedModule

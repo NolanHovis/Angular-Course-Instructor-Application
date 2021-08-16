@@ -25,4 +25,5 @@ import { PlaceholderDirective } from "./placeholder/placeholder.directive";
         BookComponent
     ]
 })
+
 export class SharedModule{}

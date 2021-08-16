@@ -66,7 +66,7 @@
 - [x] Working with NgRx in Our Project
 
 **Class 18 (Lex)**
-- [ ] Angular Universal
+- [x] Angular Universal
 
 **Class 19 (Nolan)**
 - [ ] Angular Animations

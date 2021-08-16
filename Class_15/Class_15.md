@@ -62,3 +62,34 @@
 9. Then click connect and enable automatic deploys
 
 10. Then click deploy.
+
+<hr />
+
+# Deploying App with Heroku For Multiple Folders
+
+**Rundown**
+The Github repository for our app has a folder that contains our notes and the BookIt project folder. Now when you try to deploy the app using Github on Heroku it wants to run the folder that contains the BookIt project folder. The main folder didn't have anything executable within it, which is the issue we were running into. 
+
+1. Run npm i on the main folder "Angular-Course-Instructor-Application"
+  - This will give you a package.json file
+2. In this package.json file we have to run scripts that direct us to the BookIt project folder
+```
+"scripts": {
+    "client": "cd BookIt && ng serve", 
+    "server": "node server.js",
+    "build": "cd BookIt && npm run build",
+    "dev": "concurrently --kill-others-on-fail \"ng serve\"",
+    "start": "node server.js",
+    "heroku-postbuild": "cd BookIt && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  }
+```
+3. These scripts are directing into the BookIt project folder before running the other commands commands to serve, run, build, etc.
+4. Notice it also calls the server.js file. We will need to add that with the same content as the one above. We just have to change the routes.
+```
+app.use(express.static('BookIt/dist/BookIt'));
+
+app.get('/*', (req, res) =>
+    res.sendFile('index.html', {root: 'BookIt/dist/BookIt/'}),
+);
+```
+5. We had to direct into the project folder then into distribution and the served app folder on both the static route and the root.

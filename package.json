@@ -2,7 +2,7 @@
   "name": "book-it",
   "version": "0.1.0",
   "scripts": {
-    "client": "cd BookIt && ng serve",
+    "client": "cd BookIt && ng serve", 
     "server": "node server.js",
     "build": "cd BookIt && npm run build",
     "dev": "concurrently --kill-others-on-fail \"ng serve\"",

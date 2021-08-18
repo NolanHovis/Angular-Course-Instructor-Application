@@ -69,11 +69,11 @@
 - [x] Angular Universal
 
 **Class 19 (Nolan)**
-- [ ] Angular Animations
-- [ ] Adding Offline Capabilities with Service Workers
+- [x] Angular Animations
+- [x] Adding Offline Capabilities with Service Workers
 
 **Class 20 (Will)**
-- [ ] A Basic Introduction to Unit Testing in Angular Apps
+- [x] A Basic Introduction to Unit Testing in Angular Apps
 
 **Class 21 (German)**
 - [ ] Angular as a Platform & Closer Look at the CLI

@@ -81,5 +81,12 @@
 10. In the application tab in dev tools you should see the ngsw service worker working
 11. In the Application tab check offline mode
 12. Clear cache and refresh
-13. Go to library tab and search. You'll get an error.
-14. In the network tab in dev tools you can see the errors. Our fetches arent working.
+13. In the file ngsw-config.json
+  1. Add a data group
+  2. Name it myBooks
+  3. Add urls array with the firebase link
+  4. Add cacheConfig object
+    1. max age six hours
+    2. max size is five
+    3. timeout is ten seconds
+    4. strategy is freshness

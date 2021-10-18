@@ -6,49 +6,134 @@
 
 **Adding Form in HTML**
 1. Remove what is already in the bookshelf-editor.component.html
-2. Mkae a form tag
+2. Create a form
 3. Within the form add a div with the class form-group
-5. Inside the form group classes we add the inputs for all the various aspects of a book we need
-6. In the form group div add a label for the title and an input for it as well
-  1. input: type = text, id = title, class = form-control
-7. Copy the entire form-group for the title and paste it below for the next input.
-8. Replace the label with author for the text and the for=""
-9. make sure the id for the input is author as well.
-10. Add another form group div below author for the genre
-  1. Add a label for genre
-  2. Beneath the label add a select with class form-control and id genre.
-  3. Insde the select tag place a default option that says "Select a Genre"
-    1. In the option start tag add " disabled selected value" (this makes sure that you can't select this and that it has no value)
-  4. Then add a few more options with a book genre(Mystery, Science, Fiction, Non-Fiction, etc)
-  5. Make sure you make the value the name of the genre(case sensitive)
-11. Add another form group 
-  1. A label for "Image Path"
-  2. A text input id coverImagePath and class form-control
-  3. The source is as follows
-  ```
-  [src]="bookForm.value['coverImagePath']"
-  ```
-12. Add a row and full width column
-  1. Add img tag with class of img-responsive
-13. Add another row and column
-  1. Add two buttons. A save of type submit and a cancel of type button   
+   ```html
+    <form>
+      <div class="form-group"> </div>
+    <form>
+   ```
+4. Inside the form group classes we add an input for the title of the book.
+   ```html
+    <form>
+      <div class="form-group"> 
+        <label for="title">Book Title</label>
+        <input type="text" id="title" class="form-control" />
+      </div>
+    <form>
+   ```
+5. Copy the entire form-group for the title and paste it below for the author input and the price input. Don't forget to replace the title specific properties to author
+   ```html
+    <form>
+      <div class="form-group"> 
+        <label for="title">Book Title</label>
+        <input type="text" id="title" class="form-control" />
+      </div>
+      <div class="form-group"> 
+        <label for="author">Author</label>
+        <input type="text" id="author" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input
+          type="number"
+          id="price"
+          class="form-control">
+      </div>
+    <form>
+   ```
+6. Add another form group div below author for the genre
+  - Add a label for genre
+  - Beneath the label add a select with class form-control and id genre.
+  - Insde the select tag place a default option that says "Select a Genre"
+  - In the option start tag add "disabled selected value" (this makes sure that you can't select this and that it has no value)
+  - Then add a few more options with a book genre(Mystery, Science, Fiction, Non-Fiction, etc)
+  - Make sure you make the value the name of the genre(case sensitive)
+    ```html
+    <div class="form-group">
+      <label for="title">Book Title</label>
+      <input
+        type="text"
+        id="title"
+        class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="author">Author</label>
+      <input
+        type="text"
+        id="author"
+        class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input
+        type="number"
+        id="price"
+        class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="genre">Genre</label>
+      <select class="form-control" id="genre" formControlName="genre">
+        <option disabled selected value>Select a Genre</option>
+        <option value="Mystery">Mystery</option>
+        <option value="Science">Science</option>
+        <option value="Non-Fiction">Non-Fiction</option>
+        <option value="Fiction">Fiction</option>
+      </select>
+    </div>
+    ```
+7. Add another form group 
+  - A label for "Image Path"
+  - A text input id coverImagePath and class form-control
+8. Add a row and full width column
+  - Add img tag with class of img-responsive
+    ```html
+    <div class="form-group">
+      <label for="coverImagePath">Image Path</label>
+      <input
+        type="text"
+        id="coverImagePath"
+        class="form-control">
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <img [src]="bookForm.value['coverImagePath']" alt="" class="img-responsive">
+      </div>
+    </div>
+    ```
+  - Add two buttons. A save of type submit and a cancel of type button  
+    ```html
+    <button type="submit" class="btn btn-success">Save</button>
+    <button type="button" class="btn btn-danger">Cancel</button>
+    ```
 
-**Making the Form Work in TypeScript** 
+**Making the Form Work Dynamically** 
 1. In bookshelf-editor.component.ts add a private method called initForm and add a reference to the bookshelfService
+  ```typescript
+  export class BookshelfEditorComponent implements OnInit{
+    constructor(private bookshelfService: BookshelfService) {}
+    .
+    .
+    .
+    private initForm() {}
+  }
+
+  ```
 2. Add a property called bookForm of type FormGroup(import from @angular/forms)
+   
 3. inside your method set bookForm to new FormGroup
   1. FormGroup takes a JS object to create the form values.
   2. Add FormControl elements for each book element(import from @angular/forms)
   3. ex . 'title': new FormControl()
 4. To determine if the user is in edit mode and apply values if so:
-  1. Add variables with let for each aspect of the book(title, author, genre, image)
-  2. Set them all equal to empty strings
+  4. Add variables with let for each aspect of the book(title, author, genre, image)
+  5. Set them all equal to empty strings
 5. Add an if statement checking for isEditmode to be true
-  1. if it is true set a constant named book to call the get book method in the bookshelf service.
-  2. set all your variables you created eqaul to the the corresponding book element.
+  6. if it is true set a constant named book to call the get book method in the bookshelf service.
+  7. set all your variables you created eqaul to the the corresponding book element.
     1. ex. bookTitle = book.title
 6. In your FormControl() add the corresponding elements onto the parenthesis
-  1. ex. 'title': new FormControl(bookTitle)
+  8. ex. 'title': new FormControl(bookTitle)
 7. Call the private method in ngOnInit after the isEditMode params are set.
 
 **Adding Validation** 

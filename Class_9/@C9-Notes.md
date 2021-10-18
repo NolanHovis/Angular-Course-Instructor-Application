@@ -14,7 +14,7 @@
 
 ## Observables Overview
 
-```
+
 
 RECAP of Javascript knowledge
 What is a promise?
@@ -74,7 +74,7 @@ What is a subject?
 - Subject is a special type of Observable in RxJs Library in which we can send our data to other components or services.
 
 - Although subjects can be more efficient than event emitters, subjects are found to be used as cross component event emitters.
-```
+
 
 ## Project Steps
 

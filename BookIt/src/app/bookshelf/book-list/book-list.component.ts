@@ -15,6 +15,7 @@ export class BookListComponent implements OnInit, OnDestroy {
 
   sortSwitcher = true
   sortField = 'author'
+  buttonDisplay = 'title'
 
   private bookSub:Subscription;
   constructor(
@@ -34,9 +35,11 @@ export class BookListComponent implements OnInit, OnDestroy {
     this.sortSwitcher = !this.sortSwitcher;
     if (this.sortSwitcher === true) {
       this.sortField = 'author'
+      this.buttonDisplay= 'title'
     }
     else {
       this.sortField = 'title'
+      this.buttonDisplay = 'author'
     }
   }
 

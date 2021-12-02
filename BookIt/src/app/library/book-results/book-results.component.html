@@ -1,4 +1,4 @@
-<div class="mb-3 row" *ngIf="libraryService.allBooks.length > 0">
+<div class="mb-3 row" *ngIf="libraryService.allBooks.length > 0" [@swoopIn]>
   <div class="col-md-6" *ngFor="let bookEl of libraryService.allBooks">
     <app-book [book]="bookEl"></app-book>
     <button

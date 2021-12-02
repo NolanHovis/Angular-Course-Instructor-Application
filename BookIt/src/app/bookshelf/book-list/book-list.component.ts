@@ -7,7 +7,7 @@ import { BookshelfService } from '../bookshelf.service';
 @Component({
   selector: 'app-book-list',
   templateUrl: './book-list.component.html',
-  styleUrls: ['./book-list.component.css'],
+  styleUrls: ['./book-list.component.css']
 })
 export class BookListComponent implements OnInit, OnDestroy {
   @Input() myBooks: Book[];
@@ -16,6 +16,8 @@ export class BookListComponent implements OnInit, OnDestroy {
   sortSwitcher = true
   sortField = 'author'
   buttonDisplay = 'title'
+
+  listItemState = 'in'
 
   private bookSub:Subscription;
   constructor(

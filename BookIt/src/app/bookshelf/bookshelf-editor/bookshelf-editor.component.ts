@@ -8,6 +8,7 @@ import { BookshelfService } from '../bookshelf.service';
   selector: 'app-bookshelf-editor',
   templateUrl: './bookshelf-editor.component.html',
   styleUrls: ['./bookshelf-editor.component.css'],
+
 })
 export class BookshelfEditorComponent implements OnInit {
   id: number;

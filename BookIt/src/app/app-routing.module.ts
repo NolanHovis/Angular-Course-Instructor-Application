@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { LibraryModule } from './library/library.module';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/bookshelf', pathMatch: 'full' },
@@ -19,7 +18,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules})],
+  imports: [RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules, initialNavigation: 'enabled' })],
   exports: [RouterModule]
 })
 
